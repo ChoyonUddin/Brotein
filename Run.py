@@ -22,6 +22,6 @@ colors = ['#ff9999', '#66b3ff', '#99ff99']
 
 plt.pie(macros, labels=labels, colors=colors, autopct=lambda p: '{:.1f}%'.format(p), startangle=90)
 plt.title(f'Total Calories: {total_kcals}', pad=20)
-# Ensure pie chart is circular
+
 plt.axis('equal')
 plt.show()
