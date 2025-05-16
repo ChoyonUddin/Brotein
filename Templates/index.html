@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Macro Breakdown</title>
+</head>
+<body>
+    <h1>Enter your macros</h1>
+    <form method="POST">
+        Fats (g): <input type="text" name="fats"><br>
+        Carbs (g): <input type="text" name="carbs"><br>
+        Protein (g): <input type="text" name="protein"><br>
+        <input type="submit" value="Generate Pie Chart">
+    </form>
+    {% if chart_url %}
+        <h2>Total Calories: {{ total_kcals }}</h2>
+        <img src="data:image/png;base64,{{ chart_url }}" />
+    {% endif %}
+</body>
+</html>
